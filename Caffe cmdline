@@ -1,3 +1,6 @@
+Personal cmdline:
+../../build/tools/caffe train -solver solver.prototxt -weights ResNet-50-model.caffemodel
+
 Command Line
 The command line interface – cmdcaffe – is the caffe tool for model training, scoring, and diagnostics. Run caffe without any arguments for help. This tool and others are found in caffe/build/tools. (The following example calls require completing the LeNet / MNIST example first.)
 
