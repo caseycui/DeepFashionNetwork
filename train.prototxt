@@ -31,6 +31,8 @@ layer {
 		stride: 2
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
+	
 }
 
 layer {
@@ -42,7 +44,6 @@ layer {
 		use_global_stats: true
 	}
 
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -54,7 +55,6 @@ layer {
 		bias_term: true
 	}
 
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -62,7 +62,6 @@ layer {
 	top: "conv1"
 	name: "conv1_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -75,7 +74,6 @@ layer {
 		stride: 2
 		pool: MAX
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -91,6 +89,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -101,7 +100,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -112,7 +110,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -128,6 +125,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -138,7 +136,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -149,7 +146,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -157,7 +153,6 @@ layer {
 	top: "res2a_branch2a"
 	name: "res2a_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -173,6 +168,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -183,7 +179,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -194,7 +189,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -202,7 +196,6 @@ layer {
 	top: "res2a_branch2b"
 	name: "res2a_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -218,6 +211,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -228,7 +222,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -239,7 +232,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -248,7 +240,6 @@ layer {
 	top: "res2a"
 	name: "res2a"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -256,7 +247,6 @@ layer {
 	top: "res2a"
 	name: "res2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -272,6 +262,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -282,7 +273,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -293,7 +283,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -301,7 +290,6 @@ layer {
 	top: "res2b_branch2a"
 	name: "res2b_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -317,6 +305,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -327,7 +316,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -338,7 +326,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -346,7 +333,6 @@ layer {
 	top: "res2b_branch2b"
 	name: "res2b_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -362,6 +348,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -372,7 +359,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -383,7 +369,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -392,7 +377,6 @@ layer {
 	top: "res2b"
 	name: "res2b"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -400,7 +384,6 @@ layer {
 	top: "res2b"
 	name: "res2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -416,6 +399,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -426,7 +410,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -437,7 +420,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -445,7 +427,6 @@ layer {
 	top: "res2c_branch2a"
 	name: "res2c_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -461,6 +442,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -471,7 +453,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -482,7 +463,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -490,7 +470,6 @@ layer {
 	top: "res2c_branch2b"
 	name: "res2c_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -506,6 +485,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -516,7 +496,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -527,7 +506,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -536,7 +514,6 @@ layer {
 	top: "res2c"
 	name: "res2c"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -544,7 +521,6 @@ layer {
 	top: "res2c"
 	name: "res2c_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -560,6 +536,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -570,7 +547,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -581,7 +557,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -597,6 +572,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -607,7 +583,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -618,7 +593,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -626,7 +600,6 @@ layer {
 	top: "res3a_branch2a"
 	name: "res3a_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -642,6 +615,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -652,7 +626,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -663,7 +636,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -671,7 +643,6 @@ layer {
 	top: "res3a_branch2b"
 	name: "res3a_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -687,6 +658,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -697,7 +669,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -708,7 +679,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -717,7 +687,6 @@ layer {
 	top: "res3a"
 	name: "res3a"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -725,7 +694,6 @@ layer {
 	top: "res3a"
 	name: "res3a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -741,6 +709,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -751,7 +720,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -762,7 +730,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -770,7 +737,6 @@ layer {
 	top: "res3b_branch2a"
 	name: "res3b_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -786,6 +752,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -796,7 +763,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -807,7 +773,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -815,7 +780,6 @@ layer {
 	top: "res3b_branch2b"
 	name: "res3b_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -831,6 +795,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -841,7 +806,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -852,7 +816,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -861,7 +824,6 @@ layer {
 	top: "res3b"
 	name: "res3b"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -869,7 +831,6 @@ layer {
 	top: "res3b"
 	name: "res3b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -885,6 +846,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -895,7 +857,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -906,7 +867,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -914,7 +874,6 @@ layer {
 	top: "res3c_branch2a"
 	name: "res3c_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -930,6 +889,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -940,7 +900,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -951,7 +910,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -959,7 +917,6 @@ layer {
 	top: "res3c_branch2b"
 	name: "res3c_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -975,6 +932,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -985,7 +943,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -996,7 +953,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1005,7 +961,6 @@ layer {
 	top: "res3c"
 	name: "res3c"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1013,7 +968,6 @@ layer {
 	top: "res3c"
 	name: "res3c_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1029,6 +983,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1039,7 +994,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1050,7 +1004,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1058,7 +1011,6 @@ layer {
 	top: "res3d_branch2a"
 	name: "res3d_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1074,6 +1026,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1084,7 +1037,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1095,7 +1047,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1103,7 +1054,6 @@ layer {
 	top: "res3d_branch2b"
 	name: "res3d_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1119,6 +1069,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1129,7 +1080,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1140,7 +1090,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1149,7 +1098,6 @@ layer {
 	top: "res3d"
 	name: "res3d"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1157,7 +1105,6 @@ layer {
 	top: "res3d"
 	name: "res3d_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1173,6 +1120,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1183,7 +1131,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1194,7 +1141,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1220,7 +1166,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1231,7 +1176,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1239,7 +1183,6 @@ layer {
 	top: "res4a_branch2a"
 	name: "res4a_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1255,6 +1198,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1265,7 +1209,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1276,7 +1219,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1284,7 +1226,6 @@ layer {
 	top: "res4a_branch2b"
 	name: "res4a_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1300,6 +1241,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1310,7 +1252,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1321,7 +1262,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1330,7 +1270,6 @@ layer {
 	top: "res4a"
 	name: "res4a"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1338,7 +1277,6 @@ layer {
 	top: "res4a"
 	name: "res4a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1354,6 +1292,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1364,7 +1303,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1375,7 +1313,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1383,7 +1320,6 @@ layer {
 	top: "res4b_branch2a"
 	name: "res4b_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1399,6 +1335,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1409,7 +1346,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1420,7 +1356,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1428,7 +1363,6 @@ layer {
 	top: "res4b_branch2b"
 	name: "res4b_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1444,6 +1378,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1454,7 +1389,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1465,7 +1399,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1474,7 +1407,6 @@ layer {
 	top: "res4b"
 	name: "res4b"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1482,7 +1414,6 @@ layer {
 	top: "res4b"
 	name: "res4b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1498,6 +1429,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1508,7 +1440,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1519,7 +1450,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1527,7 +1457,6 @@ layer {
 	top: "res4c_branch2a"
 	name: "res4c_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1543,6 +1472,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1553,7 +1483,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1564,7 +1493,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1572,7 +1500,6 @@ layer {
 	top: "res4c_branch2b"
 	name: "res4c_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1588,6 +1515,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1598,7 +1526,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1609,7 +1536,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1618,7 +1544,6 @@ layer {
 	top: "res4c"
 	name: "res4c"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1626,7 +1551,6 @@ layer {
 	top: "res4c"
 	name: "res4c_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1642,6 +1566,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1652,7 +1577,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1663,7 +1587,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1671,7 +1594,6 @@ layer {
 	top: "res4d_branch2a"
 	name: "res4d_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1687,6 +1609,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1697,7 +1620,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1708,7 +1630,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1716,7 +1637,6 @@ layer {
 	top: "res4d_branch2b"
 	name: "res4d_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1732,6 +1652,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1742,7 +1663,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1753,7 +1673,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1762,7 +1681,6 @@ layer {
 	top: "res4d"
 	name: "res4d"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1770,7 +1688,6 @@ layer {
 	top: "res4d"
 	name: "res4d_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1786,6 +1703,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1796,7 +1714,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1807,7 +1724,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1815,7 +1731,6 @@ layer {
 	top: "res4e_branch2a"
 	name: "res4e_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1831,6 +1746,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1841,7 +1757,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1852,7 +1767,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1860,7 +1774,6 @@ layer {
 	top: "res4e_branch2b"
 	name: "res4e_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1876,6 +1789,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1886,7 +1800,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1897,7 +1810,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1906,7 +1818,6 @@ layer {
 	top: "res4e"
 	name: "res4e"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1914,7 +1825,6 @@ layer {
 	top: "res4e"
 	name: "res4e_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1930,6 +1840,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1940,7 +1851,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1951,7 +1861,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1959,7 +1868,6 @@ layer {
 	top: "res4f_branch2a"
 	name: "res4f_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1975,6 +1883,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1985,7 +1894,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1996,7 +1904,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2004,7 +1911,6 @@ layer {
 	top: "res4f_branch2b"
 	name: "res4f_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2020,6 +1926,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2030,7 +1937,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2041,7 +1947,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2050,7 +1955,6 @@ layer {
 	top: "res4f"
 	name: "res4f"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2058,7 +1962,6 @@ layer {
 	top: "res4f"
 	name: "res4f_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2074,6 +1977,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2084,7 +1988,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2095,7 +1998,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2111,6 +2013,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2121,7 +2024,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2132,7 +2034,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2140,7 +2041,6 @@ layer {
 	top: "res5a_branch2a"
 	name: "res5a_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2156,6 +2056,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2166,7 +2067,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2177,7 +2077,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2185,7 +2084,6 @@ layer {
 	top: "res5a_branch2b"
 	name: "res5a_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2201,6 +2099,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
+	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2211,7 +2110,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2222,7 +2120,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2231,7 +2128,6 @@ layer {
 	top: "res5a"
 	name: "res5a"
 	type: "Eltwise"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2239,7 +2135,6 @@ layer {
 	top: "res5a"
 	name: "res5a_relu"
 	type: "ReLU"
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2255,6 +2150,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2265,7 +2161,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2276,7 +2171,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2284,7 +2178,6 @@ layer {
 	top: "my_res5b_branch2a"
 	name: "my_res5b_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2300,6 +2193,8 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
+
 }
 
 layer {
@@ -2310,7 +2205,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2321,7 +2215,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2329,7 +2222,6 @@ layer {
 	top: "my_res5b_branch2b"
 	name: "my_res5b_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2345,6 +2237,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2355,7 +2248,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2366,16 +2258,14 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
-	bottom: "my_res5a"
+	bottom: "res5a"
 	bottom: "my_res5b_branch2c"
 	top: "my_res5b"
 	name: "my_res5b"
 	type: "Eltwise"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2383,7 +2273,6 @@ layer {
 	top: "my_res5b"
 	name: "my_res5b_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2399,6 +2288,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2409,7 +2299,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2420,7 +2309,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2428,7 +2316,6 @@ layer {
 	top: "my_res5c_branch2a"
 	name: "my_res5c_branch2a_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2444,6 +2331,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2454,7 +2342,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2465,7 +2352,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2473,7 +2359,6 @@ layer {
 	top: "my_res5c_branch2b"
 	name: "my_res5c_branch2b_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2489,6 +2374,7 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
+	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2499,7 +2385,6 @@ layer {
 	batch_norm_param {
 		use_global_stats: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2510,7 +2395,6 @@ layer {
 	scale_param {
 		bias_term: true
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2519,7 +2403,6 @@ layer {
 	top: "my_res5c"
 	name: "my_res5c"
 	type: "Eltwise"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2527,7 +2410,6 @@ layer {
 	top: "my_res5c"
 	name: "my_res5c_relu"
 	type: "ReLU"
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
@@ -2540,7 +2422,6 @@ layer {
 		stride: 1
 		pool: AVE
 	}
-	param { lr_mult:1 decay_mult:1 }
 }
 
 layer {
