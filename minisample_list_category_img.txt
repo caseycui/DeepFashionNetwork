@@ -1,0 +1,14 @@
+img_00000009.jpg 3
+img_00000097.jpg 3
+img_00000107.jpg 3
+img_00000019.jpg 2
+img_00000029.jpg 2
+img_00000024.jpg 5
+img_00000034.jpg 5
+img_00000044.jpg 5
+img_00000054.jpg 5
+img_00000064.jpg 5
+img_00000005.jpg 4
+img_00000015.jpg 4
+img_00000035.jpg 4
+img_00000045.jpg 4
