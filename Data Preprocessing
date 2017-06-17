@@ -35,3 +35,5 @@ You can check out $CAFFE_ROOT/examples/imagenet/convert_imagenet.sh for an examp
 You can find more information in caffe's SO documentation.
 
 Resource : https://stackoverflow.com/questions/31427094/a-guide-to-convert-imageset-cpp
+
+My own personal cmd: ../../build/tools/convert_imageset --resize_height=224 --resize_width=224 --shuffle img/ minisample_list_category_img.txt mini_lmdb
