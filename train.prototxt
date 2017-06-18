@@ -14,7 +14,26 @@ layer {
 	}
 	data_param {
 		source: "mini_lmdb"
-		batch_size:1
+		batch_size:2
+		backend: LMDB
+	}
+}
+
+layer {
+ 	top: "data"
+	top: "label"
+	name: "input"
+	type: "Data" 
+	include {
+		phase:TEST
+	}
+	transform_param {
+		mirror:true
+		mean_file:"test_mean.binaryproto"
+	}
+	data_param {
+		source: "test_lmdb"
+		batch_size:256
 		backend: LMDB
 	}
 }
@@ -2379,14 +2398,21 @@ layer {
 	name: "my_fc1000"
 	type: "InnerProduct"
 	inner_product_param {
-		num_output: 5
+		num_output: 4
 	}
 }
 
 layer {
 	bottom: "my_fc1000"
-	top: "prob"
-	name: "prob"
-	type: "Softmax"
+        bottom: "label"
+	top: "loss"
+	name: "loss"
+	type: "SoftmaxWithLoss"
 }
 
+layer {
+	bottom: "my_fc1000"
+	top:"prob"
+	name:"prob"
+	type: "Softmax"
+}
