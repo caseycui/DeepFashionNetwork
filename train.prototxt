@@ -1,10 +1,10 @@
 name: "ResNet-50"
 
 layer {
-	name: "data"
-	type: "Data"
  	top: "data"
 	top: "label"
+	name: "input"
+	type: "Data" 
 	include {
 		phase:TRAIN
 	}
@@ -89,7 +89,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -124,7 +123,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -168,7 +166,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -210,7 +207,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -262,7 +258,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -305,7 +300,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -347,7 +341,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -399,7 +392,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -442,7 +434,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -484,7 +475,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -536,7 +526,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -571,7 +560,6 @@ layer {
 		stride: 2
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -615,7 +603,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -657,7 +644,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -709,7 +695,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -752,7 +737,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -794,7 +778,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -846,7 +829,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -889,7 +871,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -931,7 +912,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -983,7 +963,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1026,7 +1005,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1068,7 +1046,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1119,7 +1096,6 @@ layer {
 		stride: 2
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1198,7 +1174,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1240,7 +1215,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1292,7 +1266,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1335,7 +1308,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1377,7 +1349,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1429,7 +1400,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1472,7 +1442,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1514,7 +1483,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1566,7 +1534,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1609,7 +1576,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1651,7 +1617,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1703,7 +1668,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1746,7 +1710,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1788,7 +1751,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1840,7 +1802,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1883,7 +1844,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -1925,7 +1885,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -1977,7 +1936,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2012,7 +1970,6 @@ layer {
 		stride: 2
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -2056,7 +2013,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:0 decay_mult:0 }
-	param { lr_mult:0 decay_mult:0 }
 }
 
 layer {
@@ -2098,7 +2054,6 @@ layer {
 		stride: 1
 		bias_term: false
 	}
-	param { lr_mult:0 decay_mult:0 }
 	param { lr_mult:0 decay_mult:0 }
 }
 
@@ -2150,7 +2105,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2193,7 +2147,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 
 }
 
@@ -2237,7 +2190,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2288,7 +2240,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2331,7 +2282,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
@@ -2374,7 +2324,6 @@ layer {
 		bias_term: false
 	}
 	param { lr_mult:1 decay_mult:1 }
-	param { lr_mult:2 decay_mult:0 }
 }
 
 layer {
