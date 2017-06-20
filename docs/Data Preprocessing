@@ -1,6 +1,11 @@
 Prepare your data
-Converting img data and label into LMDB format
+1. Converting img data and label into LMDB format
+$/path/to/caffe/build/tools/convert_imageset --resize_height=224 --resize_width=224 --shuffle /path/to/train.txt /path/to/train_lmdb
 
+2. Generate mean prototxt
+$/path/to/caffe/build/tools/compute_image_mean /path/to/train_lmdb /path/to/mean_image.binaryproto
+
+1.(explained in more detail)
 Images: put all images in a folder (I'll call it here /path/to/jpegs/).
 Labels: create a text file (e.g., /path/to/labels/train.txt) with a line per input image . For example:
 (NOTE: it may not interpret absolute path to image, and use only ONE space between image and label)
