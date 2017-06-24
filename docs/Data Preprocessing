@@ -1,4 +1,8 @@
 Prepare your data
+HDF5 for multiple labels
+https://groups.google.com/forum/#!topic/caffe-users/_NdX1tpHt5Y
+
+LMDB format
 1. Converting img data and label into LMDB format
 $/path/to/caffe/build/tools/convert_imageset --resize_height=224 --resize_width=224 --shuffle /path/to/train.txt /path/to/train_lmdb
 
