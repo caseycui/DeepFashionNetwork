@@ -1,7 +1,9 @@
 Personal cmdline:
-fine tune pretrained model
+#fine tune pretrained model
 ../../build/tools/caffe train -solver solver.prototxt -weights ResNet-50-model.caffemodel
-pipe log file to save loss with interation
+#resume training
+-snapshot *.solverstate
+#pipe log file to save loss with interation
 ../../../../build/tools/caffe train -solver solver.prototxt 2>&1 | tee  subtrain1.log
 
 Command Line
