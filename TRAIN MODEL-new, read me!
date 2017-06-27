@@ -6,3 +6,7 @@
  
  train with ResNet-50 weight initialization and subtrain1 data set
  ../../../../build/tools/caffe train -solver solver.prototxt -weights ResNet-50-model.caffemodel  2>&1 | tee subtrain1.log 
+
+
+test with subtrain2 data set and save log file (subtrain2 has 52292 data points and 6536.5 batch, test itself round to 6535)
+../../../../../build/tools/caffe test -model train.prototxt -weights caffenet_train_iter_60000.caffemodel -gpu 0 -iterations 6537 2>&1 | tee subtrain2.log
