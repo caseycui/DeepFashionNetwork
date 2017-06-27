@@ -29,11 +29,11 @@ layer {
 	}
 	transform_param {
 		mirror:true
-		mean_file:"test_mean.binaryproto"
+		mean_file:"../../data_subsets/subtrain2_mean.binaryproto"
 	}
 	data_param {
-		source: "test_lmdb"
-		batch_size:256
+		source: "../../data_subsets/subtrain2_lmdb"
+		batch_size:8
 		backend: LMDB
 	}
 }
@@ -2408,6 +2408,39 @@ layer {
 	top: "loss"
 	name: "loss"
 	type: "SoftmaxWithLoss"
+}
+
+layer {
+        name: "top1_accuracy"
+	type: "Accuracy"
+	bottom: "my_fc1000"
+	bottom: "label"
+	top:"top1_accuracy"
+        accuracy_param {
+        	top_k:1
+        }
+}
+
+layer {
+        name: "top3_accuracy"
+	type: "Accuracy"
+	bottom: "my_fc1000"
+	bottom: "label"
+	top:"top3_accuracy"
+        accuracy_param {
+        	top_k:3
+        }
+}
+
+layer {
+        name: "top5_accuracy"
+	type: "Accuracy"
+	bottom: "my_fc1000"
+	bottom: "label"
+	top:"top5_accuracy"
+        accuracy_param {
+        	top_k:5
+        }
 }
 
 #layer {
