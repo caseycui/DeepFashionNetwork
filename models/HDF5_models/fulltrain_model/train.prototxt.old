@@ -21,12 +21,18 @@ layer {
 
 layer {
 	bottom: "label"	
-	top: "bbox_position"
+	top: "x1"
+	top: "y1"
+	top: "x2"
+	top: "y2"
 	top: "category"
 	name: "slice_label"
 	type: "SLICE"
 	slice_param {
 		slice_dim:1
+		slice_point:1
+		slice_point:2
+		slice_point:3
 		slice_point:4
 	}
 }
@@ -2416,22 +2422,85 @@ layer {
 
 layer {
 	bottom: "my_pool5"
-	top: "my_bbox_position"
-	name: "my_bbox_position"
+	top: "my_x1"
+	name: "my_x1"
 	type: "InnerProduct"
 	inner_product_param {
-		num_output: 4 
+		num_output: 1 
 	}
 }
 
 layer {
-	bottom: "my_bbox_position"
-        bottom: "bbox_position"
-	top: "regression_loss"
-	name: "regression_loss"
-	type: "EucleadianLoss"
-        loss_weight:1
+	bottom: "my_pool5"
+	top: "my_x2"
+	name: "my_x2"
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 1 
+	}
 }
+
+
+layer {
+	bottom: "my_pool5"
+	top: "my_y1"
+	name: "my_y1"
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 1 
+	}
+}
+
+
+layer {
+	bottom: "my_pool5"
+	top: "my_y2"
+	name: "my_y2"
+	type: "InnerProduct"
+	inner_product_param {
+		num_output: 1 
+	}
+}
+
+layer {
+	bottom: "my_x1"
+        bottom: "x1"
+	top: "regression_loss_x1"
+	name: "regression_loss_x1"
+	type: "EucleadianLoss"
+        loss_weight:0.25
+}
+
+layer {
+	bottom: "my_x2"
+        bottom: "x2"
+	top: "regression_loss_x2"
+	name: "regression_loss_x2"
+	type: "EucleadianLoss"
+        loss_weight:0.25
+}
+
+
+layer {
+	bottom: "my_y1"
+        bottom: "y1"
+	top: "regression_loss_y1"
+	name: "regression_loss_y1"
+	type: "EucleadianLoss"
+        loss_weight:0.25
+}
+
+
+layer {
+	bottom: "my_y2"
+        bottom: "y2"
+	top: "regression_loss_y2"
+	name: "regression_loss_y2"
+	type: "EucleadianLoss"
+        loss_weight:0.25
+}
+
+
 
 layer {
 	bottom: "my_fc1000"
@@ -2439,7 +2508,6 @@ layer {
 	top: "loss"
 	name: "loss"
 	type: "SoftmaxWithLoss"
-        loss_weight:0
 }
 
 layer {
