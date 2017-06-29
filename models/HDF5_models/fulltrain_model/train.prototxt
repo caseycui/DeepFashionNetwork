@@ -2,51 +2,61 @@ name: "ResNet-50"
 
 layer {
  	top: "data"
-	top: "label"
+	top: "x1"
+	top: "y1"
+	top: "x2"
+	top: "y2"
+	top: "category"
 	name: "input"
-	type: "Data" 
+	type: "HDF5Data" 
 	include {
 		phase:TRAIN
 	}
-	transform_param {
-		mirror:true
-		mean_file:"minidata_hdf5_mean.binaryproto"
-	}
-	data_param {
-		source: "minidata_hdf5"
-		batch_size:8
-		backend: HDF5 
+	hdf5_data_param {
+		#source: "../../../data_subsets/HDF5/mini_data/minidata_hdf5_path.txt"
+		source: "minidata_hdf5_path.txt"
+		batch_size:4
+		shuffle:1 
 	}
 }
 
 layer {
-	bottom: "label"	
-	top: "bbox_position"
-	top: "category"
-	name: "slice_label"
-	type: "SLICE"
-	slice_param {
-		slice_dim:1
-		slice_point:4
+	name: "concat"
+	bottom: "x1"
+	bottom: "y1"
+	bottom: "x2"
+	bottom: "y2"
+	top:"bbox_position"
+	type: "Concat"
+	concat_param {
+		axis:1
 	}
 }
+
+#layer {
+#	bottom: "label"	
+#	top: "bbox_position"
+#	top: "category"
+#	name: "slice_label"
+#	type: "SLICE"
+#	slice_param {
+#		slice_dim:1
+#		slice_point:4
+#	}
+#}
 
 layer {
  	top: "data"
 	top: "label"
 	name: "input"
-	type: "Data" 
+	type: "HDF5Data" 
 	include {
 		phase:TEST
 	}
-	transform_param {
-		mirror:true
-		mean_file:"minitest_hdf5_mean.binaryproto"
-	}
-	data_param {
+	hdf5_data_param {
 		source: "minitest_hdf5"
 		batch_size:8
-		backend: HDF5
+		shuffle:1 
 	}
 }
 
@@ -2421,17 +2431,71 @@ layer {
 	type: "InnerProduct"
 	inner_product_param {
 		num_output: 4 
+   		weight_filler {
+			type: "gaussian"
+			std: 0.01
+		}
+   		bias_filler {
+        		type: "constant"
+        		value: 1
+        	}
+
 	}
 }
+
+
+#layer {
+#	bottom: "my_bbox_position"
+#	top: "my_bbox_position"
+#	name: "bn_my_bbox_position"
+#	type: "BatchNorm"
+#	batch_norm_param {
+#		use_global_stats: true
+#	}
+#}
+
+#layer {
+#	bottom: "my_bbox_position"
+#	top: "my_bbox_position"
+#	name: "scale_my_bbox_position"
+#	type: "Scale"
+#	scale_param {
+#		bias_term: true
+#	}
+#}
 
 layer {
 	bottom: "my_bbox_position"
         bottom: "bbox_position"
 	top: "regression_loss"
 	name: "regression_loss"
-	type: "EucleadianLoss"
-        loss_weight:1
+	type: "EuclideanLoss"
+	loss_weight:0
 }
+
+
+#layer {
+#	bottom: "regression_loss"
+#	top: "regression_loss"
+#	name: "bn_regression_loss"
+#	type: "BatchNorm"
+#	batch_norm_param {
+#		use_global_stats: true
+#	}
+#}
+
+#layer {
+#	bottom: "regression_loss"
+#	top: "regression_loss"
+#	name: "scale_regression_loss"
+#	type: "Scale"
+#	scale_param {
+#		bias_term: true
+#		num_axes : 0
+#		axis : 0
+#	}
+#}
+
 
 layer {
 	bottom: "my_fc1000"
@@ -2439,7 +2503,6 @@ layer {
 	top: "loss"
 	name: "loss"
 	type: "SoftmaxWithLoss"
-        loss_weight:0
 }
 
 layer {
@@ -2480,4 +2543,5 @@ layer {
 #	top:"prob"
 #	name:"prob"
 #	type: "Softmax"
+#
 #}

@@ -1,0 +1,8 @@
+../../../img_all/Sheer_Pleated-Front_Blouse/img_00000001.jpg 072 079 232 273 3
+../../../img_all/Sheer_Pleated-Front_Blouse/img_00000002.jpg 067 059 155 161 3
+../../../img_all/Sheer_Pleated-Front_Blouse/img_00000004.jpg 051 062 167 182 3
+../../../img_all/Sheer_Pleated-Front_Blouse/img_00000008.jpg 075 074 197 246 3
+../../../img_all/Single-Button_Blazer/img_00000100.jpg 001 062 300 300 2
+../../../img_all/Single-Button_Blazer/img_00000101.jpg 001 039 297 289 2
+../../../img_all/Single-Button_Blazer/img_00000102.jpg 028 053 279 272 2
+../../../img_all/Single-Button_Blazer/img_00000103.jpg 028 061 160 180 2
