@@ -4,7 +4,7 @@ https://groups.google.com/forum/#!topic/caffe-users/_NdX1tpHt5Y
 
 LMDB format
 1. Converting img data and label into LMDB format
-$/path/to/caffe/build/tools/convert_imageset --resize_height=224 --resize_width=224 --shuffle /path/to/train.txt img/ /path/to/train_lmdb
+$/path/to/caffe/build/tools/convert_imageset --resize_height=224 --resize_width=224 --shuffle img/ /path/to/train.txt /path/to/train_lmdb
 
 2. Generate mean prototxt
 $/path/to/caffe/build/tools/compute_image_mean /path/to/train_lmdb /path/to/mean_image.binaryproto
