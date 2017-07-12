@@ -30,11 +30,11 @@ for i,l in enumerate(lines):
     # you may apply other input transformations here...
     # Note that the transformation should take img from size-by-size-by-3 and transpose it to 3-by-size-by-size
     X[i] = img
-    y1[1] = float(sp[1])/300.0
-    y2[1] = float(sp[2])/300.0
-    y3[1] = float(sp[3])/300.0
-    y4[1] = float(sp[4])/300.0
-    label[1] = sp[5]
+    y1[i] = float(sp[1])/300.0
+    y2[i] = float(sp[2])/300.0
+    y3[i] = float(sp[3])/300.0
+    y4[i] = float(sp[4])/300.0
+    label[i] = sp[5]
     if (i % 1000 == 0):
         print ("1000 lines")
 
