@@ -1,16 +1,16 @@
 1. use pretrained ResNet-50 model for fine tuning, retrain last 20 or so layers starting from 5a
 
    A. TODO: 
-         a1. train with subset1, validate with subset2, test with test set -Casey
-         a2. train with subset2, validate with subset3, test with test set; -Casey
-         a3. train with subset3, validate with subset4, test with test set; -Casey
-         a4. train with subset4, validate with subset1, test with test set; -Casey
-         a5. train with subset1&3, validate with subset2&4, test with test set; -Casey
-         a6. train with subset1&2, validate with subset3&4, test with test set; -Casey
+         a1. train with subset1, validate with subset2, test with test set; 
+         a2. train with subset2, validate with subset3, test with test set; 
+         a3. train with subset3, validate with subset4, test with test set; 
+         a4. train with subset4, validate with subset1, test with test set; 
+         a5. train with subset1&3, validate with subset2&4, test with test set; 
+         a6. train with subset1&2, validate with subset3&4, test with test set; 
          record loss for each experiment, this is to verify that we have randomly divided the dataset and our network is robust
          
    B. TODO: 
-         b1. train with full data set, validate with test data -Jiwei
+         b1. train with full data set, validate with test data 
          b2. train with subset1&2&3, validate with test data 
          b3. train with subset1&2&4, validate with subset3
          record loss for each experiment, a) loss b) top5/3/1 accuracy
