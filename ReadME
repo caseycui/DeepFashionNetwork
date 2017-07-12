@@ -1,6 +1,10 @@
+ For detailed instructions on data preparation of LMDB and HDF5 check under Docs/ 
+
+ Once you got the data prepared, here's what you need for training. The ResNet-50 weight file is too big to upload. Refer to He et al.'s ResNet git repo listed under 'Reference'
+ 
  Training---
  Eg.
- train with ResNet-50 weight initialization and subtrain1 data set, and save the log
+ train with ResNet-50 weight initialization(optional) and subtrain1 data set, and save the log
  ../../../../build/tools/caffe train -solver solver.prototxt -weights ResNet-50-model.caffemodel  2>&1 | tee subtrain1.log 
 
 Testing---
