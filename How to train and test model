@@ -1,17 +1,12 @@
- Updated full train model solver and train prototxt
- /home/ubuntu/src/caffe/examples/DeepFashionNetwork/models/fulltrain_model
- 
- Note: in train.prototxt, please modify the subtrain1 to subtrain3 in {Phase:TRAIN} and subtrain2 to subtrain4 in {Phase:TEST},
- and generate corresponding LMDB and mean file.
- 
- train with ResNet-50 weight initialization and subtrain1 data set
+ Training---
+ Eg.
+ train with ResNet-50 weight initialization and subtrain1 data set, and save the log
  ../../../../build/tools/caffe train -solver solver.prototxt -weights ResNet-50-model.caffemodel  2>&1 | tee subtrain1.log 
 
-
+Testing---
+Eg.
 test with subtrain2 data set and save log file (subtrain2 has 52292 data points and 6536.5 batch, test itself round to 6535)
 ../../../../../build/tools/caffe test -model train.prototxt -weights caffenet_train_iter_60000.caffemodel -gpu 0 -iterations 6537 2>&1 | tee subtrain2.log
 
 
 
-
-HDF5
